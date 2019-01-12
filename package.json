@@ -1,0 +1,23 @@
+{
+  "name": "discordponybot",
+  "version": "1.0.0",
+  "description": "A node.js app written with the help of the Discord.js module.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thezoomlesss/DiscordPonyBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thezoomlesss/DiscordPonyBot/issues"
+  },
+  "homepage": "https://github.com/thezoomlesss/DiscordPonyBot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
