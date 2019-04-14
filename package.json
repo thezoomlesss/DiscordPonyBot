@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/thezoomlesss/DiscordPonyBot#readme",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "mysql": "^2.16.0"
   }
 }
