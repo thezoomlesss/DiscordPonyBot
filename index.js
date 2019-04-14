@@ -47,7 +47,7 @@ bot.on('ready', () => {
 bot.on('message', function (message) {
   if (message.content == 'Hello') {
     // message.reply("Hello");
-    if (!message.author.bot) message.channel.send("->mine");
+    if (!message.author.bot) message.channel.send("Hello");
   }
 });
 

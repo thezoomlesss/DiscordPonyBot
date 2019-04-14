@@ -12,9 +12,11 @@ Start the bot
 
 
 ### TaskList
-- [x] Initial setup and message handling
+- [x] Initial setup and basic message handling
+- [x] Commando structure setup
+- [x] Establish the database connection
 - [x] Magic8Ball functionality
-- [ ] Establish the database connection
+- [x] Join/Leave voice channels
 - [ ] Data collection of each member
 - TBD
 
