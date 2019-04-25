@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando');
+var clientInClass = '';
 
 class LeaveChannelCommand extends commando.Command {
     constructor(client) {
@@ -8,13 +9,14 @@ class LeaveChannelCommand extends commando.Command {
             memberName: 'leave',
             description: 'Leaves a voice channel when requested'
         });
+        clientInClass = client;
     }
 
     async run(message, args) {
-        if(message.member.voiceChannel){
-            if(message.guild.voiceConnection){
-                message.member.voiceChannel.leave();
-
+        if (message.member.voiceChannel) {
+            if (message.guild.voiceConnection) {
+                message.member.voiceChannel.leave()
+                message.reply("See you later!");
             } else {
                 message.reply("I can't leave a voice channel if I'm not in one, silly!");
             }

@@ -2,22 +2,11 @@
 const commando = require('discord.js-commando');
 const bot = new commando.Client();
 const keys = require('./keys.json')
-const mysql = require('mysql');
+// const mongoose = require('mongoose');
 const commands = require('./commands');
-// var FFMPEG = require('ffmpeg');
 
-var connection = mysql.createConnection({
-  // properties
-  'host': keys.host,
-  'user': keys.user,
-  'password': keys.password,
-  'database': keys.database,
-  'connectionLimit': 100,
-  'port': 3306,
-  'debug': false,
-  'multipleStatements': true
-});
 
+global.servers = {};
 
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
@@ -30,17 +19,12 @@ bot.registry.registerCommandsIn(__dirname + '/commands');
  * received from Discord
  */
 bot.on('ready', () => {
-  
-  connection.connect(function (error) {
-    // callback
-    if (!!error) {
-      console.log('Error when connecting to the database from PonyBot');
 
-      console.log(error);
-    } else {
-      console.log('Db connected from PonyBot!');
-    }
-  });
+
+  console.log('Connecting to MongoDB');
+  // mongoose.connect('mongodb://localhost/ponybotdb');
+  
+  console.log('Connected!');
 });
 
 // Create an event listener for messages
@@ -52,4 +36,5 @@ bot.on('message', function (message) {
 });
 
 // Log our bot in using the token
+bot.on('error', console.error);
 bot.login(keys.token);
